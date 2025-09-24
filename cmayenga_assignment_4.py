@@ -75,5 +75,29 @@ elif current_gpa < 2.0:
     print("\n⚠️ Academic probation. Game Over.")
 else:
     print("\n✅ You survived this round! Keep going next semester...")
+    
+#Decision 2
+study_options = ["Programming", "Math", "English", "History"]
+user_choice = input("\nChoose a subject to focus your study hours on (Programming/Math/English/History): ")
+current_gpa = float(current_gpa)
+social_points = int(social_points)
+
+
+#Used chatGPT to help unserstand if statements below
+if user_choice in study_options:
+    print(f"You chose to focus on {user_choice}. That's a valid study area.")
+else:
+    print("Invalid choice. Please choose a valid subject next time.")
+
+if user_choice not in study_options:
+    print(f"'{user_choice}' is not a valid option. please choose correctly.")
+            
+if (current_gpa < 3.0 or social_points < 20) and (user_choice == "Programming" or user_choice == "Math"):
+    print("Decision 2: High priority on focused studying in the chosen area due to GPA/social points concerns.")
+elif current_gpa >= 3.8 and social_points >= 80 and not (user_choice == "Programming" or user_choice == "Math"):
+    print("Decision 2: Balanced approach to studying and socializing, maintaining strong GPA and social life.")
+else:
+    print("Decision 2: Moderate focus on studying with some social activities to keep stress in check.")
         
+
 
