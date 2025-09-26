@@ -1,4 +1,5 @@
 #Survive the semester game
+#All code was written by me, But I used ChatGPT to help me understand complex nested if statements, also help me find the error on my code
 
 #input
 student_name = "Charlestone Mayenga"
@@ -99,5 +100,42 @@ elif current_gpa >= 3.8 and social_points >= 80 and not (user_choice == "Program
 else:
     print("Decision 2: Moderate focus on studying with some social activities to keep stress in check.")
         
+
+# Step 4: Final Semester Assessment
+
+print("\n🎓 Final Semester Assessment...")
+
+# Type check using identity operators
+if type(current_gpa) is float and type(study_hours) is int and type(stress_level) is int:
+    print("✅ Stats are valid for final evaluation.")
+else:
+    print("❌ Invalid stat types detected. Ending simulation early.")
+    exit()
+
+# Nested conditions with multiple endings, Used ChatGPT to help me understand why my code wasn't working
+if current_gpa >= 3.8:
+    if stress_level <= 6:  # Nested condition
+        print("🏆 Ending: Dean’s List! You balanced everything brilliantly.")
+    else:
+        print("😓 Ending: Great grades but at the cost of your mental health. Be careful next semester!")
+elif 2.5 <= current_gpa < 3.8:
+    if stress_level < 10:  # Nested inside GPA range
+        print("😊 Ending: Balanced Success! You passed with decent grades and kept stress manageable.")
+    else:
+        print("⚠️ Ending: You passed but nearly burned out. Recovery is needed before next semester.")
+else:
+    if stress_level is not 0:  # Identity operator example
+        print("📉 Ending: You barely made it. GPA too low and stress took its toll.")
+    else:
+        print("😶 Ending: Somehow stress-free, but academics weren’t enough to succeed.")
+
+# Display Final Statistics
+print("\n📊 Final Semester Statistics:")
+print(f"Student: {student_name}")
+print(f"Final GPA: {round(current_gpa, 2)}")
+print(f"Total Study Hours: {study_hours}")
+print(f"Final Stress Level: {stress_level}")
+print(f"Social Points: {social_points}")
+
 
 
