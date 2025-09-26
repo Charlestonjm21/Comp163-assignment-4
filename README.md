@@ -42,7 +42,7 @@ The game has multiple possible endings depending on the player's final stats:
 
 📉 Barely Made It – GPA is too low, or stress takes too big of a toll.
 
-##📊 Example Stats at the End
+## 📊 Example Stats at the End
 
 At the conclusion of the game, the following statistics are displayed:
 
@@ -59,4 +59,4 @@ Social Points
 ## 🤝 AI Assistance Used
 I used ChatGPT to help me understand why some part of my code wasn't working and to help me understand complex ideas, but the code was created by myself.
 
-##👨‍💻 Developed by Charlestone Mayenga
+## 👨‍💻 Developed by Charlestone Mayenga
